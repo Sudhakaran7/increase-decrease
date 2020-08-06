@@ -1,0 +1,55 @@
+You are given with a string S, which it only contain characters,
+I and D, where I-> Increase and D-> Decrease, let n=length of S
+print any permutation A of [0, 1, ..., n] such that for all i = 0, ..., n-1:
+If S[i] == "I", then A[i] < A[i+1]
+If S[i] == "D", then A[i] > A[i+1]
+Constraint: The charaters should contain only 'I' and 'D'
+
+Input Description:
+String S cotains 'I' and 'D'
+
+Output Description:
+Any permutation A of [0, 1, ..., n]
+
+Sample Input:
+IDDI
+
+Sample Output:
+0 4 3 1 2
+
+Explanation:
+I-> Increase so 0
+D-> Decrease so (S.length) 4
+D-> Decrease so (S.length-1) 3
+I-> Increase so 1
+remaining 2 so it is printed at last.
+
+Sample Input:
+IIDDDDIIII
+
+Sample Output:
+0 1 10 9 8 7 2 3 4 5 6
+
+Sample Input:
+IDIDDIDIDIDI
+
+Sample Output:
+0 12 1 11 10 2 9 3 8 4 7 5 6
+
+Sample Input:
+DDDI
+
+Sample Output:
+4 3 2 0 1
+
+Sample Input:
+DDIIDIDIDIDIDIDIIIIIIDDDDIDID
+
+Sample Output:
+29 28 0 1 27 2 26 3 25 4 24 5 23 6 22 7 8 9 10 11 12 21 20 19 18 13 17 14 16 15
+
+Sample Input:
+IIIIIDDDDDIDI
+
+Sample Output:
+0 1 2 3 4 13 12 11 10 9 5 8 6 7
